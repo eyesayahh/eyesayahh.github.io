@@ -56,14 +56,6 @@ main {
     margin-bottom: -1vw;
 }
 
-.intro h2 {
-
-}
-
-.intro p {
-
-}
-
 .intro img {
     margin: 50px;
     height: 200px;
@@ -98,7 +90,4 @@ footer p {
     margin: 20px 0 50px 0;
     font-size: 15px;
     color: #118afa;
-}
-
-#return {
 }
