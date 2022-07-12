@@ -69,7 +69,6 @@ body {
     flex-direction: column;
     align-items: right;
     background-color: black;
-
 }
 
 
@@ -81,7 +80,7 @@ header {
     justify-content: space-between;
     align-content: center;
     padding: .5rem 1rem;
-    width: 100vw;
+
 }
 
 header>div {
@@ -117,10 +116,10 @@ main {
 }
 
 .mainTitle {
-    margin-top: 5rem;
+    margin-top: 10rem;
     display: flex;
     align-items: flex-start;
-    border-top: solid 4px var(--red-color);
+    border-top: solid 3px var(--red-color);
 }
 
 .mainTitle h1 {
@@ -128,7 +127,7 @@ main {
     /* font-size: 11rem; */
     font-size: 16vw;
     font-weight: 800;
-    border-bottom: solid 4px var(--red-color);
+    border-bottom: solid 3px var(--red-color);
     background-color: transparent;
 }
 
@@ -152,6 +151,10 @@ main {
 .mainTitle>div>div {
     display: flex;
     justify-content: space-between;
+}
+
+.mainTitle>div>div:nth-child(2) {
+    margin-top: -.5rem;
 }
 
 .mainTitle>div>div>div {
@@ -186,7 +189,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 
 .mainAbout>h1, .mainProjects>h1 {
@@ -199,6 +202,7 @@ main {
     margin-top: 1rem;
     font-size: 1.25rem;
     width: 90vw;
+    text-align: center;
 }
 
 /* MAIN PROJECTS STYLES */
@@ -251,7 +255,7 @@ footer {
 .footerEmail {
     display: flex;
     justify-content: center;
-    margin: 6rem 0;
+    margin: 10rem 0 5rem 0;
 }
 
 .footerEmail h1 {
@@ -265,15 +269,13 @@ footer {
 
 .footerMain {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 1rem;
+    gap: 1rem;
 }
 
-.footerMain>div {
-    width: 20rem;
-}
 
 .footerLinks {
     display: flex;
