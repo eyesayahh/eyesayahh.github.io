@@ -46,6 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {
+    text-decoration: none;
+}
 
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap');
@@ -66,7 +69,10 @@ body {
     display: flex;
     flex-direction: column;
     background-color: black;
+    overflow-x: hidden;
 }
+
+
 
 /* HEADER STYLES */
 
@@ -117,17 +123,24 @@ main {
 
 .mainTitle h1 {
     margin-top: -.5rem;
-    font-size: 11rem;
+    /* font-size: 11rem; */
+    font-size: 13vw;
     font-weight: 800;
     border-bottom: solid 8px var(--main-color);
     background-color: transparent;
 }
 
-.mainTitle h2 {
-    font-size: 8rem;
-    font-weight: 800;
-    letter-spacing: -.2rem;
+.mainTitle h1:nth-child(3) {
+    margin-left: .5rem;
 }
+
+.mainTitle h2 {
+    /* font-size: 8rem; */
+    font-size: 10vw;
+    font-weight: 800;
+    letter-spacing: -.5rem;
+}
+
 
 .mainTitle>div {
     display: flex;
@@ -144,8 +157,10 @@ main {
 }
 
 .mainTitleDash {
-    height: 1rem;
-    width: 7rem;
+    /* height: 1rem; */
+    height: 1.25vw;
+    /* width: 7rem; */
+    width: 7vw;
     align-self: center;
     border-radius: .3rem;
     background-color: var(--main-color);
@@ -168,9 +183,57 @@ main {
 .mainAbout {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 2rem;
 }
 
+.mainAbout>h1, .mainProjects>h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.mainAbout p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    width: 30rem;
+}
+
+/* MAIN PROJECTS STYLES */
+
+.mainProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+    width: calc(100vw - 4rem);
+    border-bottom: solid 1px var(--main-color);
+    padding-bottom: 3rem;
+}
+
+.project {
+    margin-top: 3rem;
+    border-top: solid 1px var(--main-color);
+    width: calc(100vw - 4rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.project p {
+    align-self: flex-end;
+    margin: 2rem 5rem 0 0;
+}
+
+.project a {
+    align-self: center;
+    font-size: 8rem;
+    font-size: 9vw;
+    font-weight: 800;
+}
+
+.project h1:hover {
+    color: var(--red-color);
+}
 
 
 
@@ -191,6 +254,7 @@ footer {
 
 .footerEmail h1 {
     font-size: 2rem;
+    font-weight: 600;
 }
 
 .footerEmail h1:hover {
