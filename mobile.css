@@ -1,0 +1,291 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --main-color: darkgrey;
+    --red-color: #ff1515;
+    --second-color: grey;
+}
+
+* {
+    font-family: 'EB Garamond', serif;
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    background-color: black;
+
+}
+
+
+
+/* HEADER STYLES */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: .5rem 1rem;
+    width: 100vw;
+}
+
+header>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    background-color: black;
+    font-size: .8rem;
+    font-weight: 600;
+    padding: .5rem;
+    color: var(--main-color);
+    border: solid 2px var(--main-color);
+    border-radius: 1rem;
+}
+
+.button:hover {
+    background-color: var(--red-color);
+    border: none;
+    color: black;
+    padding: calc(.5rem + 2px);
+}
+
+/* MAIN STYLES */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.mainTitle {
+    margin-top: 5rem;
+    display: flex;
+    align-items: flex-start;
+    border-top: solid 4px var(--red-color);
+}
+
+.mainTitle h1 {
+    margin-top: -.2rem;
+    /* font-size: 11rem; */
+    font-size: 16vw;
+    font-weight: 800;
+    border-bottom: solid 4px var(--red-color);
+    background-color: transparent;
+}
+
+.mainTitle h1:nth-child(3) {
+    margin-left: .25rem;
+}
+
+.mainTitle h2 {
+    /* font-size: 8rem; */
+    font-size: 12vw;
+    font-weight: 800;
+    letter-spacing: -.2rem;
+}
+
+
+.mainTitle>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainTitle>div>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainTitle>div>div>div {
+    display: flex;
+}
+
+.mainTitleDash {
+    /* height: 1rem; */
+    height: 1.25vw;
+    /* width: 7rem; */
+    width: 7vw;
+    align-self: center;
+    border-radius: .3rem;
+    background-color: var(--red-color);
+}
+
+.mainTitleDash:hover {
+    background-color: var(--red-color);
+}
+
+.mainTitle h1, .mainTitle h2 {
+    color: var(--red-color);
+}
+
+.mainTitle h1:hover, .mainTitle h2:hover {
+    color: var(--red-color)
+}
+
+/* MAIN ABOUT STYLES */
+
+.mainAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.mainAbout>h1, .mainProjects>h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.mainAbout p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    width: 90vw;
+}
+
+/* MAIN PROJECTS STYLES */
+
+.mainProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+    width: calc(100vw - 4rem);
+    border-bottom: solid 1px var(--main-color);
+    padding-bottom: 3rem;
+}
+
+.project {
+    margin-top: 3rem;
+    border-top: solid 1px var(--main-color);
+    width: calc(100vw - 4rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.project p {
+    align-self: flex-end;
+    margin: 2rem 1rem 0 0;
+}
+
+.project a {
+    align-self: center;
+    font-size: 8rem;
+    font-size: 9vw;
+    font-weight: 800;
+}
+
+.project h1:hover {
+    color: var(--red-color);
+}
+
+
+
+
+
+/* FOOTER STYLES */
+
+footer {
+    margin-top: auto;
+    width: 100vw;
+}
+
+.footerEmail {
+    display: flex;
+    justify-content: center;
+    margin: 6rem 0;
+}
+
+.footerEmail h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footerEmail h1:hover {
+    color: var(--second-color);
+}
+
+.footerMain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.footerMain>div {
+    width: 20rem;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+}
+
+.footerTag {
+    display: flex;
+    justify-content: end;
+}
+
+.footerTag p:nth-child(2) {
+    color: var(--second-color);
+}
