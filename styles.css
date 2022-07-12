@@ -1,95 +1,225 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --main-color: darkgrey;
+    --red-color: #ff1515;
+    --second-color: grey;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'EB Garamond', serif;
+    color: var(--main-color);
 }
 
 body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: relative;
-    background-color: rgb(40, 40, 40);
-    color: whitesmoke;
-    letter-spacing: 1px;
-    overflow-x: hidden;
+    background-color: black;
 }
+
+/* HEADER STYLES */
 
 header {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    background-color: rgb(29, 29, 29);
     display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1rem 2rem;
+}
+
+header>div {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 50px;
-    padding: 12px 0;
-    box-shadow: 0 5px 15px -5px rgb(29, 29, 29);
 }
 
-header a {
-    text-decoration: none;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: whitesmoke;
+.button {
+    background-color: black;
+    font-size: .8rem;
+    font-weight: 600;
+    padding: .5rem;
+    color: var(--main-color);
+    border: solid 2px var(--main-color);
+    border-radius: 1rem;
 }
 
-header a:hover {
-    color: #118afa;
+.button:hover {
+    background-color: var(--red-color);
+    border: none;
+    color: black;
+    padding: calc(.5rem + 2px);
 }
+
+/* MAIN STYLES */
 
 main {
-    height: 1000px;
-    margin: 50px 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainTitle {
+    margin-top: 5rem;
+    display: flex;
+    align-items: flex-start;
+    border-top: solid 8px var(--main-color);
+}
+
+.mainTitle h1 {
+    margin-top: -.5rem;
+    font-size: 11rem;
+    font-weight: 800;
+    border-bottom: solid 8px var(--main-color);
+    background-color: transparent;
+}
+
+.mainTitle h2 {
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: -.2rem;
+}
+
+.mainTitle>div {
     display: flex;
     flex-direction: column;
 }
 
-.intro {
-    height: 800px;
+.mainTitle>div>div {
+    display: flex;
+    justify-content: space-between;
 }
 
-.intro h1 {
-    font-size: 15vw;
-    margin-bottom: -1vw;
+.mainTitle>div>div>div {
+    display: flex;
 }
 
-.intro img {
-    margin: 50px;
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
+.mainTitleDash {
+    height: 1rem;
+    width: 7rem;
+    align-self: center;
+    border-radius: .3rem;
+    background-color: var(--main-color);
 }
 
-#web {
-    margin: 100px 0 0 0;
-    height: 800px;
+.mainTitleDash:hover {
+    background-color: var(--red-color);
 }
 
-#about {
-    height: 800px;
+.mainTitle h1, .mainTitle h2 {
+    color: var(--main-color);
 }
+
+.mainTitle h1:hover, .mainTitle h2:hover {
+    color: var(--red-color)
+}
+
+/* MAIN ABOUT STYLES */
+
+.mainAbout {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+/* FOOTER STYLES */
 
 footer {
-    position: absolute;
-    bottom: -250px;
-    width: 150vw;
-    height: 250px;
-    border-top-left-radius: 50% 100%;
-    border-top-right-radius: 50% 100%;
-    background-color: rgb(29, 29, 29);
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    padding-bottom: 20px;
+    margin-top: auto;
+    width: 100vw;
 }
 
-footer p {
-    margin: 20px 0 50px 0;
-    font-size: 15px;
-    color: #118afa;
+.footerEmail {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.footerEmail h1 {
+    font-size: 2rem;
+}
+
+.footerEmail h1:hover {
+    color: var(--second-color);
+}
+
+.footerMain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+}
+
+.footerMain>div {
+    width: 20rem;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+}
+
+.footerTag {
+    display: flex;
+    justify-content: end;
+}
+
+.footerTag p:nth-child(2) {
+    color: var(--second-color);
 }
