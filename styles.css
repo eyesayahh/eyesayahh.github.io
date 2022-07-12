@@ -65,6 +65,7 @@ main {
 }
 
 #web {
+    margin: 100px 0 0 0;
     height: 800px;
 }
 
@@ -74,7 +75,7 @@ main {
 
 footer {
     position: absolute;
-    bottom: 0;
+    bottom: -250px;
     width: 150vw;
     height: 250px;
     border-top-left-radius: 50% 100%;
