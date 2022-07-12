@@ -212,7 +212,7 @@ main {
     flex-direction: column;
     align-items: center;
     margin-top: 8rem;
-    width: calc(100vw - 4rem);
+    width: calc(100vw - 2rem);
     border-bottom: solid 1px var(--main-color);
     padding-bottom: 3rem;
 }
@@ -220,7 +220,7 @@ main {
 .project {
     margin-top: 3rem;
     border-top: solid 1px var(--main-color);
-    width: calc(100vw - 4rem);
+    width: calc(100vw - 2rem);
     display: flex;
     flex-direction: column;
 }
