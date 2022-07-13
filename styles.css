@@ -120,6 +120,8 @@ main {
     display: flex;
     align-items: flex-start;
     border-top: solid 8px var(--main-color);
+    opacity: 0;
+    animation: appear 3s ease-in 0s 1 normal both;
 }
 
 .mainTitle h1 {
@@ -181,13 +183,24 @@ main {
     color: var(--red-color)
 }
 
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* MAIN ABOUT STYLES */
 
 .mainAbout, .mainTech {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 10rem;
 }
 
 .mainAbout>h1, .mainProjects>h1, .mainTech>h1 {
@@ -208,7 +221,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 10rem;
     width: calc(100vw - 4rem);
     border-bottom: solid 1px var(--main-color);
     padding-bottom: 3rem;
@@ -234,6 +247,10 @@ main {
     font-weight: 800;
 }
 
+.project h1 {
+    transition: color .2s ease-in-out;
+}
+
 .project h1:hover {
     color: var(--red-color);
 }
@@ -242,23 +259,37 @@ main {
 /* MAIN TECH STYLES */
 
 .mainTech {
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 
 .techImgs {
-    margin-top: 2rem;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tech h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 .techImg {
-    filter: grayscale(100%);
     height: 5rem;
     width: 5rem;
     transition: all 1s ease-in-out;
+    margin-top: 1.2rem;
 }
 
 .techImg:hover {
     transform: perspective(100px) translateZ(2rem);
-    margin: 0 1rem;
+    margin: 1.2rem 1rem 0 1rem;
 }
 
 
