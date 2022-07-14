@@ -67,11 +67,13 @@ a {
 body {
     display: flex;
     flex-direction: column;
-    align-items: right;
     background-color: black;
 }
 
-
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
 
 /* HEADER STYLES */
 
@@ -86,12 +88,6 @@ header {
     display: none;
 }
 
-header>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .button {
     background-color: black;
     font-size: .8rem;
@@ -102,18 +98,20 @@ header>div {
     border-radius: 1rem;
 }
 
-.button:hover {
+header>div {
+    justify-content: center;
+}
+
+/* .button:hover {
     background-color: var(--red-color);
     border: none;
     color: black;
     padding: calc(.5rem + 2px);
-}
+} */
 
 /* MAIN STYLES */
 
 main {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     width: 100vw;
 }
@@ -133,11 +131,9 @@ main {
 
 .mainTitle h1 {
     margin-top: -.2rem;
-    /* font-size: 11rem; */
     font-size: 16vw;
     font-weight: 800;
     border-bottom: solid 3px var(--red-color);
-    background-color: transparent;
 }
 
 .mainTitle h1:nth-child(3) {
@@ -145,16 +141,9 @@ main {
 }
 
 .mainTitle h2 {
-    /* font-size: 8rem; */
     font-size: 12vw;
     font-weight: 800;
     letter-spacing: -.2rem;
-}
-
-
-.mainTitle>div {
-    display: flex;
-    flex-direction: column;
 }
 
 .mainTitle>div>div {
@@ -171,16 +160,10 @@ main {
 }
 
 .mainTitleDash {
-    /* height: 1rem; */
     height: 1.25vw;
-    /* width: 7rem; */
     width: 7vw;
     align-self: center;
     border-radius: .3rem;
-    background-color: var(--red-color);
-}
-
-.mainTitleDash:hover {
     background-color: var(--red-color);
 }
 
@@ -188,20 +171,15 @@ main {
     color: var(--red-color);
 }
 
-.mainTitle h1:hover, .mainTitle h2:hover {
-    color: var(--red-color)
-}
 
 /* MAIN ABOUT STYLES */
 
-.mainAbout, .mainTech, .mainProjects{
-    display: flex;
-    flex-direction: column;
+.mainAbout, .mainTech, .mainProjects {
     align-items: center;
     margin-top: 10rem;
 }
 
-.mainAbout>h1, .mainProjects>h1, .mainTech>h1 {
+.title {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--second-color);
@@ -216,10 +194,6 @@ main {
 
 /* MAIN TECH STYLES */
 
-.mainTech {
-    margin-top: 10rem;
-}
-
 .techImgs {
     margin-top: 4rem;
     display: flex;
@@ -230,8 +204,6 @@ main {
 }
 
 .tech {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     width: 6rem;
 }
@@ -248,6 +220,10 @@ main {
     margin-top: .8rem;
 }
 
+.react {
+    width: 5.5rem;
+}
+
 .clickSpin {
     animation: spin 1s  ease-in-out 1 normal;
 }
@@ -261,8 +237,6 @@ main {
     }
 }
 
-
-
 /* MAIN PROJECTS STYLES */
 
 .mainProjects {
@@ -275,8 +249,6 @@ main {
     margin-top: 3rem;
     border-top: solid 1px var(--main-color);
     width: calc(100vw - 2rem);
-    display: flex;
-    flex-direction: column;
 }
 
 .project p {
@@ -290,14 +262,6 @@ main {
     font-size: 9vw;
     font-weight: 800;
 }
-
-.project h1:hover {
-    color: var(--red-color);
-}
-
-
-
-
 
 /* FOOTER STYLES */
 
@@ -317,10 +281,6 @@ footer {
     font-weight: 600;
 }
 
-.footerEmail h1:hover {
-    color: var(--second-color);
-}
-
 .footerMain {
     display: flex;
     flex-direction: column;
@@ -329,7 +289,6 @@ footer {
     padding: 2rem 1rem;
     gap: 1rem;
 }
-
 
 .footerLinks {
     display: flex;
