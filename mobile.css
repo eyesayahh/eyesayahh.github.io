@@ -80,7 +80,10 @@ header {
     justify-content: space-between;
     align-content: center;
     padding: .5rem 1rem;
+}
 
+.headerTitle {
+    display: none;
 }
 
 header>div {
@@ -120,6 +123,12 @@ main {
     display: flex;
     align-items: flex-start;
     border-top: solid 3px var(--red-color);
+    opacity: 0;
+    transition: opacity 3s ease-in;
+}
+
+.appear {
+    opacity: 1;
 }
 
 .mainTitle h1 {
@@ -185,14 +194,14 @@ main {
 
 /* MAIN ABOUT STYLES */
 
-.mainAbout {
+.mainAbout, .mainTech, .mainProjects{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10rem;
 }
 
-.mainAbout>h1, .mainProjects>h1 {
+.mainAbout>h1, .mainProjects>h1, .mainTech>h1 {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--second-color);
@@ -205,13 +214,58 @@ main {
     text-align: center;
 }
 
-/* MAIN PROJECTS STYLES */
+/* MAIN TECH STYLES */
 
-.mainProjects {
+.mainTech {
+    margin-top: 10rem;
+}
+
+.techImgs {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tech {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 8rem;
+    width: 6rem;
+}
+
+.tech h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.techImg {
+    height: 5rem;
+    width: 5rem;
+    transition: all .5s ease-in-out;
+    margin-top: .8rem;
+}
+
+.clickSpin {
+    animation: spin 1s  ease-in-out 1 normal;
+}
+
+@keyframes spin {
+    0% {
+        transform: perspective(100px) translateY(0) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(100px) translateY(0) rotateY(360deg);
+    }
+}
+
+
+
+/* MAIN PROJECTS STYLES */
+
+.mainProjects {
     width: calc(100vw - 2rem);
     border-bottom: solid 1px var(--main-color);
     padding-bottom: 3rem;

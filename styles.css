@@ -120,13 +120,16 @@ main {
     display: flex;
     align-items: flex-start;
     border-top: solid 8px var(--main-color);
-    opacity: 0;
-    animation: appear 3s ease-in 0s 1 normal both;
+    opacity: 0%;
+    transition: opacity 3s ease-in;
+}
+
+.appear {
+    opacity: 100%;
 }
 
 .mainTitle h1 {
     margin-top: -.5rem;
-    /* font-size: 11rem; */
     font-size: 13vw;
     font-weight: 800;
     border-bottom: solid 8px var(--main-color);
@@ -138,7 +141,6 @@ main {
 }
 
 .mainTitle h2 {
-    /* font-size: 8rem; */
     font-size: 10vw;
     font-weight: 800;
     letter-spacing: -.5rem;
@@ -160,9 +162,7 @@ main {
 }
 
 .mainTitleDash {
-    /* height: 1rem; */
     height: 1.25vw;
-    /* width: 7rem; */
     width: 7vw;
     align-self: center;
     border-radius: .3rem;
@@ -183,25 +183,14 @@ main {
     color: var(--red-color)
 }
 
-
-
-@keyframes appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* MAIN ABOUT STYLES */
-
-.mainAbout, .mainTech {
+.mainAbout, .mainTech, .mainProjects {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10rem;
 }
+
+/* MAIN ABOUT STYLES */
 
 .mainAbout>h1, .mainProjects>h1, .mainTech>h1 {
     font-size: 1.5rem;
@@ -210,18 +199,15 @@ main {
 }
 
 .mainAbout p {
-    margin-top: 1rem;
+    margin-top: 3rem;
     font-size: 1.25rem;
     width: 30rem;
+    text-align: center;
 }
 
 /* MAIN PROJECTS STYLES */
 
 .mainProjects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10rem;
     width: calc(100vw - 4rem);
     border-bottom: solid 1px var(--main-color);
     padding-bottom: 3rem;
@@ -277,7 +263,7 @@ main {
 }
 
 .tech h2 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.2rem;
 }
 
