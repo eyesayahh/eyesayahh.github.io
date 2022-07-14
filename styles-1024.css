@@ -1,0 +1,132 @@
+body {
+    min-height: 100vh;
+}
+
+/* HEADER STYLES */
+
+header {
+    padding: 1rem 2rem;
+}
+
+.headerTitle {
+    display: block;
+}
+
+.button {
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--red-color);
+    border: none;
+    color: black;
+    padding: calc(.5rem + 2px);
+}
+
+/* MAIN STYLES */
+
+.mainTitle {
+    margin-top: 5rem;
+    border-top: solid 8px var(--main-color);
+}
+
+.mainTitle h1 {
+    margin-top: -.5rem;
+    font-size: 13vw;
+    border-bottom: solid 8px var(--main-color);
+}
+
+.mainTitle h1:nth-child(3) {
+    margin-left: .5rem;
+}
+
+.mainTitle h2 {
+    font-size: 10vw;
+    letter-spacing: -.5rem;
+}
+
+.mainTitleDash {
+    background-color: var(--main-color);
+    transition: background-color .2s ease-in-out;
+}
+
+.mainTitle h1, .mainTitle h2 {
+    color: var(--main-color);
+    transition: color .2s ease-in-out;
+}
+
+.mainTitle h1:hover, .mainTitle h2:hover {
+    color: var(--red-color)
+}
+
+.mainTitleDash:hover {
+    background-color: var(--red-color);
+}
+
+/* MAIN ABOUT STYLES */
+
+.mainAbout p {
+    margin-top: 3rem;
+    width: 30rem;
+}
+
+/* MAIN TECH STYLES */
+
+.techImg {
+    margin-top: 1.2rem;
+}
+
+.clickSpin {
+    animation: none;
+}
+
+.techImg:hover {
+    transform: perspective(100px) translateZ(2rem);
+    margin: 1.2rem 1rem 0 1rem;
+}
+
+/* MAIN PROJECTS STYLES */
+
+.mainProjects {
+    width: calc(100vw - 4rem);
+}
+
+.project {
+    width: calc(100vw - 4rem);
+}
+
+.project p {
+    margin: 2rem 5rem 0 0;
+}
+
+.project h1 {
+    transition: color .2s ease-in-out;
+}
+
+.project h1:hover {
+    color: var(--red-color);
+}
+
+/* FOOTER STYLES */
+
+.footerEmail {
+    margin: 4rem 0;
+}
+
+.footerEmail h1 {
+    font-size: 2rem;
+}
+
+.footerEmail h1:hover {
+    color: var(--second-color);
+}
+
+.footerMain {
+    flex-direction: row;
+    padding: 2rem 2rem;
+    gap: none;
+}
+
+.footerMain>div {
+    width: 15rem;
+}
