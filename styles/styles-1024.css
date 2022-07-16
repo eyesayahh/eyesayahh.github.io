@@ -8,10 +8,6 @@ header {
     padding: 1rem 2rem;
 }
 
-.headerTitle {
-    display: block;
-}
-
 .button {
     transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
