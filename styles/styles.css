@@ -81,8 +81,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding: .5rem 1rem;
     width: 100vw;
+}
+
+header>* {
+    padding: .5rem 1rem;
 }
 
 .headerTitle {
@@ -182,6 +185,7 @@ main {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--second-color);
+    text-align: center;
 }
 
 .mainAbout p {
